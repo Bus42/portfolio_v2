@@ -4,13 +4,13 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "Progressive Web Application Developer",
-      name: "Greg Brewton"
+      title: "Progressive Web Application Development",
+      name: "Studio42Dev"
     };
   }
   render() {
     return (
-      <div className="card">
+      <div className="card" id="header">
         <div className="card-content">
           <div className="card-title">
             <header>
