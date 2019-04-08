@@ -11,8 +11,8 @@ class App extends Component {
       <div className="container">
         <Header />
         <Intro />
-        <Contact />
         <Gallery />
+        <Contact />
       </div>
     );
   }
