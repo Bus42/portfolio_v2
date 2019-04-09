@@ -6,21 +6,21 @@ class ImageCard extends Component {
     this.state = null;
   }
   render() {
-    //src, title, content, link
-    const card = this.props.preview;
+    //image, title, content, url
+    const card = this.props.card;
     return (
       <div className="card transparent" style={{ width: "250px" }}>
         <a
           className="btn transparent"
-          href={card.link}
-          target={card.src}
+          href={card.url}
+          target={card.image}
           style={{ fontWeight: "bold" }}
         >
           {card.title}
         </a>
         <div className="card-image">
-          <a href={card.link}>
-            <img style={{ padding: "8px" }} src={card.src} alt={card.title} />
+          <a href={card.url}>
+            <img style={{ padding: "8px" }} src={card.image} alt={card.title} />
           </a>
         </div>
         <div className="card-content">
