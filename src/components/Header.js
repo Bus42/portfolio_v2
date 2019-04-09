@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import header_image_right from "../Assets/header_image_right.jpeg";
+import smoke from "../Assets/smoke.png";
 
 class Header extends Component {
   constructor(props) {
@@ -10,23 +10,24 @@ class Header extends Component {
   }
   render() {
     return (
-      <div className="card" id="header" style={{height: "120px"}} >
-        <img
-          src={header_image_right}
-          style={{
-            height: "120px",
-            position: "absolute",
-            top: "0",
-            right: "0",
-            padding: "0 !important",
-            margin: "0 !important"
-          }}
-          alt="header decoration"
-        />
+      <div
+        className="card"
+        id="header"
+        style={{
+          height: "120px",
+          backgroundImage: `url(${smoke})`,
+          backgroundPosition: "right",
+          backgroundSize: "100% auto",
+          marginBottom: "2em"
+        }}
+      >
         <div className="card-content">
           <div className="card-title">
             <header>
-              <h4>{this.state.name}</h4>
+              <h4 style={{
+                color: "whitesmoke",
+                mixBlendMode: "difference"
+              }} >{this.state.name}</h4>
               <p />
             </header>
           </div>

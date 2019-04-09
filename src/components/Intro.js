@@ -14,7 +14,6 @@ class Intro extends Component {
   render() {
     return (
       <div
-        className="card"
         style={{
           height: "fit-content",
           backgroundImage: `url(${header_image_right})`,
@@ -30,8 +29,8 @@ class Intro extends Component {
               shapeOutside: "circle()",
               float: "left",
               position: "relative",
-              right: "40px",
-              bottom: "12px"
+              right: "12px",
+              bottom: "2px"
             }}
             src={shades}
             alt="Me in cheap Aviator shades"
