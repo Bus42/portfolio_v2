@@ -7,19 +7,16 @@ class Certifications extends Component {
     this.state = {
       certifications: [
         {
-          title: "Responsive Web Design",
           image: require("../Assets/responsive-web-design.png"),
           url:
             "https://www.freecodecamp.org/certification/bus42/responsive-web-design"
         },
         {
-          title: "JavaScript Algorithms and Data Structures",
           image: require("../Assets/javascript-algorithms-and-data-structures.png"),
           url:
             "https://www.freecodecamp.org/certification/bus42/javascript-algorithms-and-data-structures"
         },
         {
-          title: "Front End Development",
           image: require("../Assets/front-end-development.png"),
           url:
             "https://www.freecodecamp.org/certification/bus42/legacy-front-end"
@@ -29,7 +26,7 @@ class Certifications extends Component {
   }
   render() {
     return (
-      <div style={{ display: "flex", marginTop: "2em" }}>
+      <div className="row" style={{ display: "flex", marginTop: "2em", flexFlow: "row wrap", justifyContent: "space-evenly" }}>
         {this.state.certifications.map((certification, index) => {
           return <ImageCard key={index} card={certification} />;
         })}

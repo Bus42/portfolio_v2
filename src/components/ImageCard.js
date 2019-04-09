@@ -10,22 +10,28 @@ class ImageCard extends Component {
     const card = this.props.card;
     return (
       <div className="card transparent" style={{ width: "250px" }}>
-        <a
-          className="btn transparent"
-          href={card.url}
-          target={card.image}
-          style={{ fontWeight: "bold" }}
-        >
-          {card.title}
-        </a>
+        {card.title ? (
+          <p style={{ padding: "1em" }} className="white-text">
+            {card.title}
+          </p>
+        ) : null}
         <div className="card-image">
           <a href={card.url}>
-            <img style={{ padding: "8px" }} src={card.image} alt={card.title} />
+            <img
+              style={{ padding: "8px" }}
+              src={card.image}
+              alt={card.title || "#"}
+            />
           </a>
         </div>
-        <div className="card-content">
-          <p style={{ color: "white" }}>{card.content}</p>
-        </div>
+        {card.content ? (
+          <ul className="collapsible transparent" style={{border: "none", color: "white"}}>
+            <li>
+              <div className="collapsible-header transparent" style={{border: "none"}}><i class="fab fa-readme"></i></div>
+              <div className="collapsible-body transparent" style={{border: "none"}}><p style={{ color: "white" }}>{card.content}</p></div>
+            </li>
+          </ul>
+        ) : null}
       </div>
     );
   }
