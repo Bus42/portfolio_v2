@@ -9,7 +9,7 @@ class ImageCard extends Component {
     //src, title, content, link
     const card = this.props.preview;
     return (
-      <div className="card transparent" style={{ width: "350px" }}>
+      <div className="card transparent" style={{ width: "250px" }}>
         <a
           className="btn transparent"
           href={card.link}
@@ -19,7 +19,9 @@ class ImageCard extends Component {
           {card.title}
         </a>
         <div className="card-image">
-          <img style={{ padding: "8px" }} src={card.src} alt={card.title} />
+          <a href={card.link}>
+            <img style={{ padding: "8px" }} src={card.src} alt={card.title} />
+          </a>
         </div>
         <div className="card-content">
           <p style={{ color: "white" }}>{card.content}</p>
