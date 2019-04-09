@@ -3,7 +3,9 @@ import React, { Component } from "react";
 class ImageCard extends Component {
   constructor(props) {
     super(props);
-    this.state = null;
+    this.state = {
+      open: false
+    };
   }
   render() {
     //image, title, content, url
@@ -25,10 +27,23 @@ class ImageCard extends Component {
           </a>
         </div>
         {card.content ? (
-          <ul className="collapsible transparent" style={{border: "none", color: "white"}}>
-            <li>
-              <div className="collapsible-header transparent" style={{border: "none"}}><i className="fab fa-readme"></i></div>
-              <div className="collapsible-body transparent" style={{border: "none"}}><p style={{ color: "white" }}>{card.content}</p></div>
+          <ul
+            className="collapsible transparent"
+            style={{ border: "none", color: "white" }}
+          >
+            <li id={card.title} >
+              <div
+                className="collapsible-header transparent"
+                style={{ border: "none" }}
+              >
+                <i className="far fa-eye" /> <small>Details</small>
+              </div>
+              <div
+                className="collapsible-body transparent"
+                style={{ border: "none" }}
+              >
+                <p style={{ color: "white" }}>{card.content}</p>
+              </div>
             </li>
           </ul>
         ) : null}

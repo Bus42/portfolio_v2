@@ -18,7 +18,7 @@ class Intro extends Component {
           height: "fit-content",
           backgroundImage: `url(${header_image_right})`,
           backgroundPosition: "left",
-          backgroundSize: "100% 100%"
+          backgroundSize: "150% 100%"
         }}
       >
         <div className="card-content">
