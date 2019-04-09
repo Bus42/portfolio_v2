@@ -26,7 +26,7 @@ class Contact extends Component {
   render() {
     return (
       <div
-        className="card"
+        className="card transparent white-text"
         style={{
           display: "flex",
           flexFlow: "row wrap",

@@ -1,58 +1,55 @@
 import React, { Component } from "react";
 import shades from "../Assets/shades.jpg";
+import header_image_right from "../Assets/header_image_right.jpg";
 
 class Intro extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      greeting: (
-        <div>
-          <p>
-            My name is Greg Brewton and I am Studio42Dev. To stand out from the
-            crowd, you need to push the envelope a little with style - do
-            something subtle, but out of the ordinary flow of things. You don't
-            need flashy animations and color to make your website stand out from
-            the crowd. When your users visit your application or site (the terms
-            are basically interchangeable), they should get an experience, not a
-            jumble of ads and buried links. Intuitive interfaces with relevant
-            content where users are more likely to see it instead of buried in
-          </p>
-          <p>
-            It is pushing the envelope At the end of the FirstSpriti Digital
-            Experience Platform powers enterprise-class. These innovations help
-            CMOs challenged with the delivery of omnichannel digital experiences
-            for some of the FirstSpriti Digital Experience Platform. These
-            innovations help CMOs challenged with the delivery of omnichannel
-            digital experiences for some of the FirstSpriti Digital Experience
-            Platform powers enterprise-class. Spriti introduced new capabilities
-            to the awards page of the FirstSpriti Digital Experience Platform
-            powers enterprise-class. Clicking on this link which refers to B2B
-            Marketing awards shortlist will take you to the envelope At the end
-            of the FirstSpriti Digital Experience Platform powers
-            enterprise-class. Clicking on this link which refers to B2B
-            Marketing awards shortlist will take you to the awards page of the
-            customer journey.
-          </p>
-        </div>
-      )
-    };
+    this.state = null;
   }
+  introStyle = {
+    color: "white",
+    mixBlendMode: "difference"
+  };
   render() {
     return (
-      <div className="card">
+      <div
+        className="card"
+        style={{
+          height: "fit-content",
+          backgroundImage: `url(${header_image_right})`,
+          backgroundPosition: "left",
+          backgroundSize: "100% 100%"
+        }}
+      >
         <div className="card-content">
           <img
             className="circle"
             style={{
-              width: "180px",
+              width: "120px",
               shapeOutside: "circle()",
               float: "left",
-              padding: "8px"
+              position: "relative",
+              right: "40px",
+              bottom: "12px"
             }}
             src={shades}
             alt="Me in cheap Aviator shades"
           />
-          {this.state.greeting}
+          <p style={this.introStyle}>
+            To stand out from the crowd you need to push the envelope a little
+            with style. Do something subtle but out of the ordinary flow of
+            things. You don't need flashy animations and colors to make your
+            website stand out.
+          </p>
+          <p style={this.introStyle}>
+            When your users visit your application or site (the terms are
+            basically interchangeable), they should get an experience, not a
+            jumble of ads and buried links. User Interfaces with relevant
+            content where users are more likely to see it instead of buried in a
+            sea of side content provide the kind of user experience that keeps
+            them engaged.
+          </p>
         </div>
       </div>
     );
