@@ -29,13 +29,9 @@ class Certifications extends Component {
   }
   render() {
     return (
-      <div style={{display: "flex", marginTop: '2em'}} >
+      <div style={{ display: "flex", marginTop: "2em" }}>
         {this.state.certifications.map((certification, index) => {
-          return (
-            <ImageCard
-              key={index} card={certification}
-            />
-          );
+          return <ImageCard key={index} card={certification} />;
         })}
       </div>
     );
