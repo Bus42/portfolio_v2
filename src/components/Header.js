@@ -16,9 +16,10 @@ class Header extends Component {
         style={{
           height: "120px",
           backgroundImage: `url(${smoke})`,
-          backgroundPosition: "right",
-          backgroundSize: "100% auto",
-          marginBottom: "2em"
+          backgroundPosition: "bottom",
+          backgroundSize: "101% 101%",
+          marginBottom: "2em",
+          border: '0 !important'
         }}
       >
         <div className="card-content">

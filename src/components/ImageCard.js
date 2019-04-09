@@ -27,7 +27,7 @@ class ImageCard extends Component {
         {card.content ? (
           <ul className="collapsible transparent" style={{border: "none", color: "white"}}>
             <li>
-              <div className="collapsible-header transparent" style={{border: "none"}}><i class="fab fa-readme"></i></div>
+              <div className="collapsible-header transparent" style={{border: "none"}}><i className="fab fa-readme"></i></div>
               <div className="collapsible-body transparent" style={{border: "none"}}><p style={{ color: "white" }}>{card.content}</p></div>
             </li>
           </ul>
