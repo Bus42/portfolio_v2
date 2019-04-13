@@ -25,10 +25,12 @@ class Header extends Component {
         <div className="card-content">
           <div className="card-title">
             <header>
-              <h4 style={{
+              <h2 style={{
                 color: "whitesmoke",
-                mixBlendMode: "difference"
-              }} >{this.state.name}</h4>
+                mixBlendMode: "difference",
+                position: 'relative',
+                bottom: '30px'
+              }} >{this.state.name}</h2>
               <p />
             </header>
           </div>

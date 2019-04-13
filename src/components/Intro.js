@@ -18,7 +18,7 @@ class Intro extends Component {
           height: "fit-content",
           backgroundImage: `url(${header_image_right})`,
           backgroundPosition: "left",
-          backgroundSize: "150% 100%"
+          backgroundSize: "125% 100%"
         }}
       >
         <div className="card-content">
@@ -42,8 +42,7 @@ class Intro extends Component {
             website stand out.
           </p>
           <p style={this.introStyle}>
-            When your users visit your application or site (the terms are
-            basically interchangeable), they should get an experience, not a
+            When your users visit your application or site they should get an experience, not a
             jumble of ads and buried links. User Interfaces with relevant
             content where users are more likely to see it instead of buried in a
             sea of side content provide the kind of user experience that keeps
