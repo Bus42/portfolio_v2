@@ -42,7 +42,7 @@ class Contact extends Component {
           <span key={index}>
             <a style={{ color: "inherit" }} href={contact.url}>
               <span>
-                <span className="hide-on-med-only">{contact.logo}</span>{" "}
+                <span className="fa-lg hide-on-med-only">{contact.logo}</span>{" "}
                 <span className="hide-on-small-only">{contact.name}</span>
               </span>
             </a>
@@ -51,12 +51,14 @@ class Contact extends Component {
         <Router>
           <NavLink className="white-text" to={gallery}>
             <span>
-              <i className="far fa-clone hide-on-med-only" />{" "}
+              <i className="far fa-lg fa-clone hide-on-med-only" />{" "}
+              <span className="hide-on-small-only">Project Gallery</span>
             </span>
           </NavLink>
           <NavLink className="white-text" to={certifications}>
             <span>
-              <i className="fas fa-certificate hide-on-med-only" />{" "}
+              <i className="fas fa-lg fa-certificate hide-on-med-only" />{" "}
+              <span className="hide-on-small-only">Certifications</span>
             </span>
           </NavLink>
           <Route exact path={gallery} component={Gallery} />

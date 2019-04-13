@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import shades from "../Assets/shades.jpg";
-import header_image_right from "../Assets/header_image_right.jpg";
 
 class Intro extends Component {
   constructor(props) {
@@ -13,24 +12,15 @@ class Intro extends Component {
   };
   render() {
     return (
-      <div
-        style={{
-          height: "fit-content",
-          backgroundImage: `url(${header_image_right})`,
-          backgroundPosition: "left",
-          backgroundSize: "125% 100%"
-        }}
-      >
-        <div className="card-content">
+        <div className="container black">
           <img
-            className="circle"
             style={{
               width: "120px",
               shapeOutside: "circle()",
+              clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
               float: "left",
               position: "relative",
-              right: "12px",
-              bottom: "2px"
+              right: "8px"
             }}
             src={shades}
             alt="Me in cheap Aviator shades"
@@ -49,7 +39,6 @@ class Intro extends Component {
             them engaged.
           </p>
         </div>
-      </div>
     );
   }
 }

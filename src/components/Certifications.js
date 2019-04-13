@@ -10,46 +10,62 @@ class Certifications extends Component {
           image: require("../Assets/responsive-web-design.png"),
           url:
             "https://www.freecodecamp.org/certification/bus42/responsive-web-design",
-            provider: "freeCodeCamp"
+          provider: "freeCodeCamp"
         },
         {
           title: "Javascript Algorithms and Data Structures",
           image: require("../Assets/javascript-algorithms-and-data-structures.png"),
           url:
             "https://www.freecodecamp.org/certification/bus42/javascript-algorithms-and-data-structures",
-            provider: "freeCodeCamp"
+          provider: "freeCodeCamp"
         },
         {
           title: "Front End Development",
           image: require("../Assets/front-end-development.png"),
           url:
             "https://www.freecodecamp.org/certification/bus42/legacy-front-end",
-            provider: "freeCodeCamp"
+          provider: "freeCodeCamp"
         }
       ]
     };
   }
   render() {
     return (
-      <div className="container"
-      style={{
-        marginTop: "24px",
-        display: "flex",
-        flexFlow: "row wrap",
-        justifyContent: "center"
-      }}
+      <div
+        className="container"
+        style={{
+          display: "flex",
+          flexFlow: "row wrap",
+          justifyContent: "space-evenly"
+        }}
       >
         {this.state.certifications.map((cert, index) => {
           return (
-            <div id={cert.title} className="container" key={index} >
+            <div
+              id={cert.title}
+              className="card black container"
+              key={index}
+              style={{ width: "350px" }}
+            >
               <div className="card-image">
                 <img src={cert.image} alt={cert.title} />
                 <span className="card-title" />
               </div>
-              <div className="card-action black"><a href={cert.url}>View on {cert.provider}</a>
-              <button className="btn-floating black right" ><i onClick={(e) => {
-                document.getElementById(`${cert.title}`).requestFullscreen();
-              }} class="fas fa-expand"></i></button>
+              <div className="card-action black">
+                <a href={cert.url}>View on {cert.provider}</a>
+                <button className="btn-floating black right">
+                  <i
+                    onClick={() => {
+                      const active = document.getElementById(`${cert.title}`);
+                      if(document.fullscreenElement){
+                       document.exitFullscreen() 
+                      } else {
+                        active.requestFullscreen();
+                      }
+                    }}
+                    className="fas fa-expand"
+                  />
+                </button>
               </div>
             </div>
           );
