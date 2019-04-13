@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 class Contact extends Component {
   constructor(props) {
@@ -43,14 +44,20 @@ class Contact extends Component {
             </a>
           </span>
         ))}
-        <span>
-          <i className="far fa-clone hide-on-med-only" />{" "}
-          <span className="hide-on-small-only">Project Gallery</span>{" "}
-        </span>
-        <span>
-          <i className="fas fa-certificate hide-on-med-only" />{" "}
-          <span className="hide-on-small-only">Certifications</span>{" "}
-        </span>
+        <Router>
+          <Link className="white-text" to="/gallery">
+            <span>
+              <i className="far fa-clone hide-on-med-only" />{" "}
+              <span className="hide-on-small-only">Project Gallery</span>{" "}
+            </span>
+          </Link>
+          <Link className="white-text" to="/certifications">
+            <span>
+              <i className="fas fa-certificate hide-on-med-only" />{" "}
+              <span className="hide-on-small-only">Certifications</span>{" "}
+            </span>
+          </Link>
+        </Router>
       </div>
     );
   }
