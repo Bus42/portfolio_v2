@@ -27,8 +27,8 @@ class Contact extends Component {
     };
   }
   render() {
-    const gallery = "gallery";
-    const certifications = "certifications";
+    const gallery = "/gallery";
+    const certifications = "/certifications";
     return (
       <div
         className="card transparent white-text"
@@ -49,20 +49,18 @@ class Contact extends Component {
           </span>
         ))}
         <Router>
-          <NavLink className="white-text" to="/gallery">
+          <NavLink className="white-text" to={gallery}>
             <span>
               <i className="far fa-clone hide-on-med-only" />{" "}
-              <span className="hide-on-small-only">Project Gallery</span>{" "}
             </span>
           </NavLink>
-          <NavLink className="white-text" to="/certifications">
+          <NavLink className="white-text" to={certifications}>
             <span>
               <i className="fas fa-certificate hide-on-med-only" />{" "}
-              <span className="hide-on-small-only">Certifications</span>{" "}
             </span>
           </NavLink>
-          <Route path={`/${gallery}`} component={Gallery} />
-          <Route path={`/${certifications}`} component={Certifications} />
+          <Route exact path={gallery} component={Gallery} />
+          <Route exact path={certifications} component={Certifications} />
         </Router>
       </div>
     );

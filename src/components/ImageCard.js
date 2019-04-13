@@ -8,41 +8,39 @@ class ImageCard extends Component {
     };
   }
   render() {
-    //image, title, content, url
+    //props.card = image, title, content, url
     const card = this.props.card;
+    const imageCardStyle = {
+      width: "250px",
+      backgroundImage: `url(${card.image})`,
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center"
+    };
     return (
-      <div className="card transparent" style={{ width: "250px" }}>
-        {card.title ? (
-          <p style={{ padding: "1em" }} className="white-text">
-            {card.title}
-          </p>
-        ) : null}
-        <div className="card-image">
-          <a href={card.url}>
-            <img
-              style={{ padding: "8px" }}
-              src={card.image}
-              alt={card.title || "#"}
-            />
-          </a>
-        </div>
+      <div className="card transparent" style={imageCardStyle}>
         {card.content ? (
           <ul
-            className="collapsible transparent"
+            className="collapsible"
             style={{ border: "none", color: "white" }}
           >
-            <li id={card.title} >
+            <li id={card.title}>
               <div
-                className="collapsible-header transparent"
-                style={{ border: "none" }}
+                className="collapsible-header black"
+                style={{ border: "none", opacity: ".75", width: "100%" }}
               >
-                <i className="far fa-eye" /> <small>Details</small>
+                {card.title}
               </div>
               <div
-                className="collapsible-body transparent"
-                style={{ border: "none" }}
+                className="collapsible-body black"
+                style={{ border: "none", opacity: ".75" }}
               >
                 <p style={{ color: "white" }}>{card.content}</p>
+                <div className="card-action">
+                  <a href={card.url} target={card.title}>
+                    <button className="btn grey darken-1">Try It Out</button>
+                  </a>
+                </div>
               </div>
             </li>
           </ul>
