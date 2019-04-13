@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import Gallery from "./Gallery";
+import Certifications from "./Certifications";
 
 class Contact extends Component {
   constructor(props) {
@@ -25,6 +27,8 @@ class Contact extends Component {
     };
   }
   render() {
+    const gallery = "gallery";
+    const certifications = "certifications";
     return (
       <div
         className="card transparent white-text"
@@ -45,18 +49,20 @@ class Contact extends Component {
           </span>
         ))}
         <Router>
-          <Link className="white-text" to="/gallery">
+          <NavLink className="white-text" to="/gallery">
             <span>
               <i className="far fa-clone hide-on-med-only" />{" "}
               <span className="hide-on-small-only">Project Gallery</span>{" "}
             </span>
-          </Link>
-          <Link className="white-text" to="/certifications">
+          </NavLink>
+          <NavLink className="white-text" to="/certifications">
             <span>
               <i className="fas fa-certificate hide-on-med-only" />{" "}
               <span className="hide-on-small-only">Certifications</span>{" "}
             </span>
-          </Link>
+          </NavLink>
+          <Route path={`/${gallery}`} component={Gallery} />
+          <Route path={`/${certifications}`} component={Certifications} />
         </Router>
       </div>
     );
