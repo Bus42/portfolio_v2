@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import Gallery from "./Gallery";
-import Certifications from "./Certifications";
-import Home from "./Home";
 
 class Contact extends Component {
   constructor(props) {
@@ -28,10 +24,7 @@ class Contact extends Component {
     };
   }
   render() {
-    const gallery = "/gallery";
-    const certifications = "/certifications";
-    const home = "/";
-    
+
     return (
       <div
         className="container black white-text"
@@ -51,23 +44,6 @@ class Contact extends Component {
             </a>
           </span>
         ))}
-        <Router>
-          <NavLink className="white-text" to={gallery}>
-            <span>
-              <i className="far fa-lg fa-clone hide-on-med-only" />{" "}
-              <span className="hide-on-small-only">Project Gallery</span>
-            </span>
-          </NavLink>
-          <NavLink className="white-text" to={certifications}>
-            <span>
-              <i className="fas fa-lg fa-certificate hide-on-med-only" />{" "}
-              <span className="hide-on-small-only">Certifications</span>
-            </span>
-          </NavLink>
-          <Route exact path={home} component={Home} />
-          <Route exact path={gallery} component={Gallery} />
-          <Route exact path={certifications} component={Certifications} />
-        </Router>
       </div>
     );
   }
