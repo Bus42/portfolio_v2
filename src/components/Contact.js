@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import Gallery from "./Gallery";
 import Certifications from "./Certifications";
+import Home from "./Home";
 
 class Contact extends Component {
   constructor(props) {
@@ -29,9 +30,11 @@ class Contact extends Component {
   render() {
     const gallery = "/gallery";
     const certifications = "/certifications";
+    const home = "/";
+    
     return (
       <div
-        className="card transparent white-text"
+        className="container black white-text"
         style={{
           display: "flex",
           flexFlow: "row wrap",
@@ -61,6 +64,7 @@ class Contact extends Component {
               <span className="hide-on-small-only">Certifications</span>
             </span>
           </NavLink>
+          <Route exact path={home} component={Home} />
           <Route exact path={gallery} component={Gallery} />
           <Route exact path={certifications} component={Certifications} />
         </Router>

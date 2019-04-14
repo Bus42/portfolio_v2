@@ -11,7 +11,7 @@ class ImageCard extends Component {
     //props.card = image, title, content, url
     const card = this.props.card;
     const imageCardStyle = {
-      width: "250px",
+      width: "300px",
       backgroundImage: `url(${card.image})`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
