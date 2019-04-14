@@ -8,11 +8,10 @@ class Gallery extends Component {
       touchscreen: false,
       previews: [
         {
-          image: require("../Assets/JS_Calculator.png"),
-          title: "Javascript Calculator",
-          content:
-            "This calculator was built as a part of my curriculum in FreeCodeCamp. It was created using vanilla JS and plain CSS",
-          url: "https://bus42.github.io/JSCalculator/",
+          image: require("../Assets/blogosaurus.png"),
+          title: "Blogosaurus",
+          content: "I made this as a way to demonstrate authentication and realtime database integration with Firebase. Sign in (even with a fake email - it's just a demo), view posts by other users, and make new posts",
+          url: "https://https://net-ninja-mario-plan-ad7c1.firebaseapp.com/.studio42dev.com",
           href: "#one!"
         },
         {
@@ -26,7 +25,7 @@ class Gallery extends Component {
           image: require("../Assets/magic_counter.png"),
           title: "Magic Counter",
           content:
-            "Counter42 utilizes Google and Facebook analytics and uses Firebase for authentication and database integration. You can change your name, upload your background, select additional damage types, and create an account to keep track of everything including wins and losses.",
+            "Counter42 uses Firebase for authentication and realtime database. Change your name and background, select additional damage types, and create an account to keep track of wins and losses. It can also be downloaded and run as a native app.",
           url: "https://counter42.studio42dev.com/",
           href: "#three!"
         },
@@ -47,11 +46,10 @@ class Gallery extends Component {
           href: "#five!"
         },
         {
-          image: require("../Assets/tictactoe.png"),
-          title: "Tic Tac Wars",
-          content:
-            "It's the classic game of Tic-Tac-Toe. Choose your team and beat the computer. It will beat you if you let it, and try to keep you from winning.",
-          url: "https://bus42.github.io/tictactoe/",
+          image: require("../Assets/soundboard.png"),
+          title: "Rick and Morty Soundboard",
+          content: "As part of freeCodeCamp's curriculum, I created a soundboard that can be controlled by mouse, keyboard, or touch. I wanted a 'cartoony' feel, so I went with Rick and Morty. It can also be downloaded and run as a native app on most phones.",
+          url: "https://soundboard-420247.firebaseapp.com/",
           href: "#six!"
         },
         {
@@ -69,6 +67,22 @@ class Gallery extends Component {
             "This app has a random page generator which will display a random Wikipedia article in a new window or allow you to enter any search term and show you the top ten rated results with a url that will open in another tab in your browser.",
           url: "https://bus42.github.io/wiki-reader/",
           href: "#eight!"
+        },
+        {
+          image: require("../Assets/JS_Calculator.png"),
+          title: "Javascript Calculator",
+          content:
+            "This calculator was built as a part of my curriculum in FreeCodeCamp. It was created using vanilla JS and plain CSS",
+          url: "https://bus42.github.io/JSCalculator/",
+          href: "#nine!"
+        },
+        {
+          image: require("../Assets/tictactoe.png"),
+          title: "Tic Tac Wars",
+          content:
+            "It's the classic game of Tic-Tac-Toe. Choose your team and beat the computer. It will beat you if you let it, and try to keep you from winning.",
+          url: "https://bus42.github.io/tictactoe/",
+          href: "#ten!"
         }
       ]
     };

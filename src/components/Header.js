@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class Header extends Component {
   render() {
     return (
       <header className="container white-text" style={{padding: "10px 2em"}}>
-        <h4>
+        <NavLink to="/"><h4 className="white-text">
           {this.state.title}{" "}
           <small>
             <span className="hide-on-small-only">
@@ -17,7 +18,7 @@ class Header extends Component {
               Development
             </span>
           </small>
-        </h4>
+        </h4></NavLink>
       </header>
     );
   }
