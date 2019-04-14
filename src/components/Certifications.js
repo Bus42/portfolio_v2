@@ -32,7 +32,6 @@ class Certifications extends Component {
   render() {
     return (
       <div
-        className="container"
         style={{
           display: "flex",
           flexFlow: "row wrap",

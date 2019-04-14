@@ -12,7 +12,7 @@ class Home extends Component {
   };
   render() {
     return (
-      <div className="container black">
+      <div>
         <img
           style={{
             width: "120px",

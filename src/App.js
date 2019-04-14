@@ -31,18 +31,31 @@ class App extends Component {
       <Router>
         <div id="wrapper" style={{ minHeight: "100vh" }}>
           <Header />
-          <nav className="black" style={{display: 'flex', justifyContent: 'space-evenly'}} >
-          <Link className="white-text" to={gallery}>
-            Project Gallery
-          </Link>
-          <Link className="white-text" to={certifications}>
-            Certifications
-          </Link></nav>
-          <Route exact path={home} component={Home} />
-          <Route path={gallery} component={Gallery} />
-          <Route path={certifications} component={Certifications} />
-          <Contact />
+          <nav
+            className="black"
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+          >
+            <Link className="white-text" to={gallery}>
+              Project Gallery
+            </Link>
+            <Link className="white-text" to={certifications}>
+              Certifications
+            </Link>
+          </nav>
+          <div
+            className="container"
+            style={{
+              display: "flex",
+              flexFlow: "column nowrap",
+              justifyContent: "center"
+            }}
+          >
+            <Route path={home} component={Home} />
+            <Route path={gallery} component={Gallery} />
+            <Route path={certifications} component={Certifications} />
+          </div>
         </div>
+        <Contact />
       </Router>
     );
   }

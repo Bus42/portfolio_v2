@@ -27,7 +27,7 @@ class Contact extends Component {
 
     return (
       <div
-        className="container black white-text"
+        className="white-text"
         style={{
           display: "flex",
           flexFlow: "row wrap",
