@@ -31,7 +31,11 @@ class Contact extends Component {
         style={{
           display: "flex",
           flexFlow: "row wrap",
-          justifyContent: "space-evenly"
+          justifyContent: "space-evenly",
+          position: "absolute",
+          bottom: "10px",
+          left: "0px",
+          width: "100%"
         }}
       >
         {this.state.contacts.map((contact, index) => (

@@ -74,11 +74,11 @@ class Gallery extends Component {
     };
   }
 
-componentDidMount(){
-  if(window.navigator.maxTouchPoints > 0){
-    this.setState({touchscreen: true})
+  componentDidMount() {
+    if (window.navigator.maxTouchPoints > 0) {
+      this.setState({ touchscreen: true });
+    }
   }
-}
 
   render() {
     return this.state.touchscreen ? (
@@ -86,6 +86,7 @@ componentDidMount(){
         {this.state.previews.map((preview, index) => {
           return (
             <div
+              key={index}
               className="carousel-item black white-text"
               style={{ display: "flex", justifyContent: "center" }}
             >

@@ -27,9 +27,18 @@ class ImageCard extends Component {
             <li id={card.title}>
               <div
                 className="collapsible-header black"
-                style={{ border: "none", opacity: ".75", width: "100%" }}
+                style={{
+                  border: "none",
+                  opacity: ".75",
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "space-between"
+                }}
               >
-                {card.title}
+                <span>{card.title}</span>{" "}
+                <span>
+                  <i className="fas fa-angle-down" />
+                </span>
               </div>
               <div
                 className="collapsible-body black"

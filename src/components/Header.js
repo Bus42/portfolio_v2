@@ -7,7 +7,7 @@ class Header extends Component {
   }
   render() {
     return (
-      <header className="container white-text">
+      <header className="container white-text" style={{padding: "10px 2em"}}>
         <h4>
           {this.state.title}{" "}
           <small>
