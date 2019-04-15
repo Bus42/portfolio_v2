@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ImageCard from "./ImageCard";
+import M from 'materialize-css';
+
 
 class Gallery extends Component {
   constructor(props) {
@@ -10,8 +12,10 @@ class Gallery extends Component {
         {
           image: require("../Assets/blogosaurus.png"),
           title: "Blogosaurus",
-          content: "I made this as a way to demonstrate authentication and realtime database integration with Firebase. Sign in (even with a fake email - it's just a demo), view posts by other users, and make new posts",
-          url: "https://https://net-ninja-mario-plan-ad7c1.firebaseapp.com/.studio42dev.com",
+          content:
+            "I made this as a way to demonstrate authentication and realtime database integration with Firebase. Sign in (even with a fake email - it's just a demo), view posts by other users, and make new posts",
+          url:
+            "https://https://net-ninja-mario-plan-ad7c1.firebaseapp.com/.studio42dev.com",
           href: "#one!"
         },
         {
@@ -48,7 +52,8 @@ class Gallery extends Component {
         {
           image: require("../Assets/soundboard.png"),
           title: "Rick and Morty Soundboard",
-          content: "As part of freeCodeCamp's curriculum, I created a soundboard that can be controlled by mouse, keyboard, or touch. I wanted a 'cartoony' feel, so I went with Rick and Morty. It can also be downloaded and run as a native app on most phones.",
+          content:
+            "As part of freeCodeCamp's curriculum, I created a soundboard that can be controlled by mouse, keyboard, or touch. I wanted a 'cartoony' feel, so I went with Rick and Morty. It can also be downloaded and run as a native app on most phones.",
           url: "https://soundboard-420247.firebaseapp.com/",
           href: "#six!"
         },
@@ -89,6 +94,7 @@ class Gallery extends Component {
   }
 
   componentDidMount() {
+    M.AutoInit();
     if (window.navigator.maxTouchPoints > 0) {
       this.setState({ touchscreen: true });
     }

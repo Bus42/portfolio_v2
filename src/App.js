@@ -50,7 +50,7 @@ class App extends Component {
               justifyContent: "center"
             }}
           >
-            <Route path={home} component={Home} />
+            <Route exact path={home} component={Home} />
             <Route path={gallery} component={Gallery} />
             <Route path={certifications} component={Certifications} />
           </div>
