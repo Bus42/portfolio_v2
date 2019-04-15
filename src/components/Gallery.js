@@ -94,10 +94,14 @@ class Gallery extends Component {
   }
 
   componentDidMount() {
-    M.AutoInit();
+    console.log("Gallery component mounted")
     if (window.navigator.maxTouchPoints > 0) {
       this.setState({ touchscreen: true });
     }
+  }
+  componentDidUpdate(){
+    console.log("Gallery component updated")
+    M.AutoInit();
   }
 
   render() {

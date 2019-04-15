@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import Contact from "./components/Contact";
 import Home from "./components/Home";
@@ -50,9 +50,11 @@ class App extends Component {
               justifyContent: "center"
             }}
           >
-            <Route exact path={home} component={Home} />
-            <Route path={gallery} component={Gallery} />
-            <Route path={certifications} component={Certifications} />
+            <Switch>
+              <Route exact path={home} component={Home} />
+              <Route path={gallery} component={Gallery} />
+              <Route path={certifications} component={Certifications} />
+            </Switch>
           </div>
         </div>
         <Contact />
