@@ -56,8 +56,9 @@ class App extends Component {
               <Route path={certifications} component={Certifications} />
             </Switch>
           </div>
+
+          <Contact />
         </div>
-        <Contact />
       </Router>
     );
   }
