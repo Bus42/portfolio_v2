@@ -5,6 +5,8 @@
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --header-font: "Cinzel Decorative", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --entrance-timing: 0.3s;
+  --red: #e81212;
 }
 body {
   font-family: var(--primary-font);
@@ -16,20 +18,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.footerLink :hover {
+  color: var(--red);
+}
+
+/* Animations */
 a.active {
-  color: red !important;
+  color: var(--red) !important;
   animation-name: jello;
-  animation-duration: .8s;
+  animation-duration: 0.8s;
 }
 .certifications_slide-appear-active {
   animation-name: slideInRight;
-  animation-duration: .3s;
+  animation-duration: var(--entrance-timing);
 }
 .gallery_slide-appear-active {
   animation-name: slideInLeft;
-  animation-duration: .3s;
+  animation-duration: var(--entrance-timing);
 }
 .home_slide-appear-active {
   animation-name: slideInDown;
-  animation-duration: .3s;
+  animation-duration: var(--entrance-timing);
 }
+.certifications_slide-exit-active {
+  animation-name: slideOutRight;
+  animation-duration: var(--entrance-timing);
+}
+.gallery_slide-exit-active {
+  animation-name: slideOutLeft;
+  animation-duration: var(--entrance-timing);
+}
+.home_slide-exit-active {
+  animation-name: slideOutDown;
+  animation-duration: var(--entrance-timing);
+}
+/*  */

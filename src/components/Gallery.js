@@ -106,14 +106,14 @@ class Gallery extends Component {
   }
 
   render() {
-    const {appearHome} = this.state;
+    const { appearHome } = this.state;
     return (
-      <CSSTransition 
-      in={appearHome}
-      appear={true}
-      timeout={600}
-      classNames="gallery_slide"
-       >
+      <CSSTransition
+        in={appearHome}
+        appear={true}
+        timeout={600}
+        classNames="gallery_slide"
+      >
         {this.state.touchscreen ? (
           <div className="carousel carousel-slider center">
             {this.state.previews.map((preview, index) => {

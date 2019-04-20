@@ -38,7 +38,7 @@ class Footer extends Component {
       >
         {this.state.contacts.map((contact, index) => (
           <span key={index}>
-            <a style={{ color: "inherit" }} href={contact.url}>
+            <a className="footerLink" style={{ color: "inherit" }} href={contact.url}>
               <span>
                 <span className="fa-lg hide-on-med-only">{contact.logo}</span>{" "}
                 <span className="hide-on-small-only">{contact.name}</span>
