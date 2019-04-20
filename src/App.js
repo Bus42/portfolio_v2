@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Contact from "./components/Contact";
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import Certifications from "./components/Certifications";
 import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 
 class App extends Component {
   constructor(props) {
@@ -22,9 +23,6 @@ class App extends Component {
       this.setState({ touchscreen: true });
     }
   }
-  linkStyle = {
-    margin: "1em 3em"
-  }
   render() {
     const home = this.state.home;
     const gallery = this.state.gallery;
@@ -34,17 +32,7 @@ class App extends Component {
       <Router>
         <div id="wrapper" style={{ minHeight: "100vh" }}>
           <Header />
-          <nav
-            className="black"
-            style={{ display: "flex", justifyContent: "flex-end" }}
-          >
-            <Link style={this.linkStyle} className="white-text" to={gallery}>
-              Project Gallery
-            </Link>
-            <Link style={this.linkStyle} className="white-text" to={certifications}>
-              Certifications
-            </Link>
-          </nav>
+          <Navbar />
           <div
             className="container"
             style={{
@@ -59,7 +47,6 @@ class App extends Component {
               <Route path={certifications} component={Certifications} />
             </Switch>
           </div>
-
           <Contact />
         </div>
       </Router>
