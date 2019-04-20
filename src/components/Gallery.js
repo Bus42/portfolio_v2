@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ImageCard from "./ImageCard";
 import M from "materialize-css";
-import { CSSTransition } from "react-transition-group";
 
 class Gallery extends Component {
   constructor(props) {
@@ -106,43 +105,33 @@ class Gallery extends Component {
   }
 
   render() {
-    const { appearHome } = this.state;
-    return (
-      <CSSTransition
-        in={appearHome}
-        appear={true}
-        timeout={600}
-        classNames="gallery_slide"
+    return this.state.touchscreen ? (
+      <div className="carousel carousel-slider center">
+        {this.state.previews.map((preview, index) => {
+          return (
+            <div
+              key={index}
+              className="carousel-item black white-text"
+              style={{ display: "flex", justifyContent: "center" }}
+            >
+              <ImageCard card={preview} key={index} />
+            </div>
+          );
+        })}
+      </div>
+    ) : (
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "row wrap",
+          justifyContent: "space-evenly",
+          alignItems: "center"
+        }}
       >
-        {this.state.touchscreen ? (
-          <div className="carousel carousel-slider center">
-            {this.state.previews.map((preview, index) => {
-              return (
-                <div
-                  key={index}
-                  className="carousel-item black white-text"
-                  style={{ display: "flex", justifyContent: "center" }}
-                >
-                  <ImageCard card={preview} key={index} />
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          <div
-            style={{
-              display: "flex",
-              flexFlow: "row wrap",
-              justifyContent: "space-evenly",
-              alignItems: "center"
-            }}
-          >
-            {this.state.previews.map((preview, index) => {
-              return <ImageCard card={preview} key={index} />;
-            })}
-          </div>
-        )}
-      </CSSTransition>
+        {this.state.previews.map((preview, index) => {
+          return <ImageCard card={preview} key={index} />;
+        })}
+      </div>
     );
   }
 }

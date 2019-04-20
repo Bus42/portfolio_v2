@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { CSSTransition } from "react-transition-group";
 
 class Certifications extends Component {
   constructor(props) {
@@ -32,53 +31,45 @@ class Certifications extends Component {
     };
   }
   render() {
-    const { appearHome } = this.state;
     return (
-      <CSSTransition
-        in={appearHome}
-        appear={true}
-        timeout={600}
-        classNames="certifications_slide"
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "row wrap",
+          justifyContent: "space-evenly"
+        }}
       >
-        <div
-          style={{
-            display: "flex",
-            flexFlow: "row wrap",
-            justifyContent: "space-evenly"
-          }}
-        >
-          {this.state.certifications.map((cert, index) => {
-            return (
-              <div
-                id={cert.title}
-                className="card black container"
-                key={index}
-                style={{ width: "350px" }}
-              >
-                <div className="card-image">
-                  <img
-                    onClick={() => {
-                      const active = document.getElementById(`${cert.title}`);
-                      if (document.fullscreenElement) {
-                        document.exitFullscreen();
-                      } else {
-                        active.requestFullscreen();
-                      }
-                    }}
-                    style={{ cursor: "pointer" }}
-                    src={cert.image}
-                    alt={cert.title}
-                  />
-                  <span className="card-title" />
-                </div>
-                <div className="card-action black center">
-                  <a href={cert.url}>View on {cert.provider}</a>
-                </div>
+        {this.state.certifications.map((cert, index) => {
+          return (
+            <div
+              id={cert.title}
+              className="card black container"
+              key={index}
+              style={{ width: "350px" }}
+            >
+              <div className="card-image">
+                <img
+                  onClick={() => {
+                    const active = document.getElementById(`${cert.title}`);
+                    if (document.fullscreenElement) {
+                      document.exitFullscreen();
+                    } else {
+                      active.requestFullscreen();
+                    }
+                  }}
+                  style={{ cursor: "pointer" }}
+                  src={cert.image}
+                  alt={cert.title}
+                />
+                <span className="card-title" />
               </div>
-            );
-          })}
-        </div>
-      </CSSTransition>
+              <div className="card-action black center">
+                <a href={cert.url}>View on {cert.provider}</a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     );
   }
 }
