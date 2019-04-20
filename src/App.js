@@ -22,6 +22,9 @@ class App extends Component {
       this.setState({ touchscreen: true });
     }
   }
+  linkStyle = {
+    margin: "1em 3em"
+  }
   render() {
     const home = this.state.home;
     const gallery = this.state.gallery;
@@ -33,12 +36,12 @@ class App extends Component {
           <Header />
           <nav
             className="black"
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "flex-end" }}
           >
-            <Link className="white-text" to={gallery}>
+            <Link style={this.linkStyle} className="white-text" to={gallery}>
               Project Gallery
             </Link>
-            <Link className="white-text" to={certifications}>
+            <Link style={this.linkStyle} className="white-text" to={certifications}>
               Certifications
             </Link>
           </nav>

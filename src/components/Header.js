@@ -8,9 +8,9 @@ class Header extends Component {
   }
   render() {
     return (
-      <header className="container white-text" style={{ padding: "10px 2em" }}>
+      <header className="container white-text" style={{ padding: "10px 2em", fontFamily: "'Cinzel Decorative', cursive" }}>
         <NavLink to="/">
-          <h4 className="white-text">
+          <h4 className="white-text" style={{fontWeight: "bold"}}>
             {this.state.title}{" "}
             <small>
               <h5 style={{display: "inline"}}>
