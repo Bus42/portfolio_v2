@@ -114,7 +114,7 @@ class Gallery extends Component {
               className="carousel-item black white-text"
               style={{ display: "flex", justifyContent: "center" }}
             >
-              <ImageCard card={preview} key={index} />
+              <ImageCard card={preview} />
             </div>
           );
         })}

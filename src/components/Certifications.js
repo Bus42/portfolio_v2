@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import ImageCard from "./ImageCard";
+import M from "materialize-css";
 
 class Certifications extends Component {
   constructor(props) {
@@ -30,8 +32,32 @@ class Certifications extends Component {
       appearHome: true
     };
   }
+
+  componentDidMount() {
+    M.AutoInit();
+    if (window.navigator.maxTouchPoints > 0) {
+      this.setState({ touchscreen: true });
+    }
+  }
+  componentDidUpdate() {
+    console.log("Certifications component updated");
+    M.AutoInit();
+  }
   render() {
-    return (
+    return this.state.touchscreen ? (
+      <div className="carousel carousel-slider center">
+        {this.state.certifications.map((cert, index)=>{
+          return (
+            <div className="carousel-item black white-text"
+              key={index}
+              style={{display: "flex", justifyContent: "center"}}
+            >
+            <ImageCard card={cert} />
+            </div>
+          )
+        })}
+      </div>
+    ) : (
       <div
         style={{
           display: "flex",
