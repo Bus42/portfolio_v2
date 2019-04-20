@@ -19,6 +19,11 @@ class Footer extends Component {
           name: " linkedIn",
           url: "https://www.linkedin.com/in/gregbrewton/",
           logo: <i className="fab fa-linkedin" />
+        },
+        {
+          name: " CodePen",
+          url: "https://codepen.io/Bus42/",
+          logo: <i className="fab fa-codepen"></i>
         }
       ]
     };
@@ -38,7 +43,7 @@ class Footer extends Component {
       >
         {this.state.contacts.map((contact, index) => (
           <span key={index}>
-            <a className="footerLink" style={{ color: "inherit" }} href={contact.url}>
+            <a className="linkText" style={{ color: "inherit" }} href={contact.url}>
               <span>
                 <span className="fa-lg hide-on-med-only">{contact.logo}</span>{" "}
                 <span className="hide-on-small-only">{contact.name}</span>
