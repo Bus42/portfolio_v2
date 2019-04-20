@@ -26,7 +26,8 @@ class Certifications extends Component {
             "https://www.freecodecamp.org/certification/bus42/legacy-front-end",
           provider: "freeCodeCamp"
         }
-      ]
+      ],
+      appearHome: true
     };
   }
   render() {
@@ -56,7 +57,7 @@ class Certifications extends Component {
                       active.requestFullscreen();
                     }
                   }}
-                  style={{cursor: "pointer"}}
+                  style={{ cursor: "pointer" }}
                   src={cert.image}
                   alt={cert.title}
                 />

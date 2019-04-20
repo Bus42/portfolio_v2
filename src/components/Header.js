@@ -8,12 +8,15 @@ class Header extends Component {
   }
   render() {
     return (
-      <header className="container white-text" style={{ padding: "10px 2em", fontFamily: "var(--header-font)" }}>
+      <header
+        className="container white-text"
+        style={{ padding: "10px 2em", fontFamily: "var(--header-font)" }}
+      >
         <NavLink to="/">
-          <h4 className="white-text" style={{fontWeight: "bold"}}>
-            {this.state.title}{" "}
+          <h4 style={{ fontWeight: "bold", color: "white" }}>
+            Studio<span style={{color: "var(--active-color)"}} >42 </span>
             <small>
-              <h5 style={{display: "inline"}}>
+              <h5 style={{ display: "inline" }}>
                 <span className="hide-on-med-and-down">Progressive </span>
                 <span className="hide-on-small-only">Web </span>
                 <span className="hide-on-med-and-down">Application </span>

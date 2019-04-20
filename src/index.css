@@ -5,19 +5,52 @@
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --header-font: "Cinzel Decorative", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --entrance-timing: 0.3s;
+  --active-color: #e81212;
 }
 body {
   font-family: var(--primary-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
+  overflow-x: hidden;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-a.active {
-  color: red !important;
-  animation-name: jello;
-  animation-duration: .8s;
+.linkText :hover {
+  color: var(--active-color) !important;
 }
+
+/* Animations */
+a.active {
+  color: var(--active-color) !important;
+  animation-name: jello;
+  animation-duration: 0.8s;
+}
+.certifications_slide-appear-active {
+  animation-name: slideInRight;
+  animation-duration: var(--entrance-timing);
+}
+.gallery_slide-appear-active {
+  animation-name: slideInLeft;
+  animation-duration: var(--entrance-timing);
+}
+.home_slide-appear-active {
+  animation-name: slideInDown;
+  animation-duration: var(--entrance-timing);
+}
+.certifications_slide-exit-active {
+  animation-name: slideOutRight;
+  animation-duration: var(--entrance-timing);
+}
+.gallery_slide-exit-active {
+  animation-name: slideOutLeft;
+  animation-duration: var(--entrance-timing);
+}
+.home_slide-exit-active {
+  animation-name: slideOutDown;
+  animation-duration: var(--entrance-timing);
+}
+/*  */

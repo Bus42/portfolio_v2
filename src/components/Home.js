@@ -4,7 +4,9 @@ import shades from "../Assets/shades.jpg";
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = null;
+    this.state = {
+      appearHome: true
+    };
   }
   introStyle = {
     color: "white",

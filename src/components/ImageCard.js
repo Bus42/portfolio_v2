@@ -36,7 +36,7 @@ class ImageCard extends Component {
                 }}
               >
                 <span>{card.title}</span>{" "}
-                <span>
+                <span className="linkText" >
                   <i className="fas fa-angle-down" />
                 </span>
               </div>

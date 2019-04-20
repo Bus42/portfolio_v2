@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ImageCard from "./ImageCard";
-import M from 'materialize-css';
-
+import M from "materialize-css";
 
 class Gallery extends Component {
   constructor(props) {
@@ -89,7 +88,8 @@ class Gallery extends Component {
           url: "https://bus42.github.io/tictactoe/",
           href: "#ten!"
         }
-      ]
+      ],
+      appearHome: true
     };
   }
 
@@ -99,8 +99,8 @@ class Gallery extends Component {
       this.setState({ touchscreen: true });
     }
   }
-  componentDidUpdate(){
-    console.log("Gallery component updated")
+  componentDidUpdate() {
+    console.log("Gallery component updated");
     M.AutoInit();
   }
 

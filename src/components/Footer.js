@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Contact extends Component {
+class Footer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,6 +19,11 @@ class Contact extends Component {
           name: " linkedIn",
           url: "https://www.linkedin.com/in/gregbrewton/",
           logo: <i className="fab fa-linkedin" />
+        },
+        {
+          name: " CodePen",
+          url: "https://codepen.io/Bus42/",
+          logo: <i className="fab fa-codepen"></i>
         }
       ]
     };
@@ -38,7 +43,7 @@ class Contact extends Component {
       >
         {this.state.contacts.map((contact, index) => (
           <span key={index}>
-            <a style={{ color: "inherit" }} href={contact.url}>
+            <a className="linkText" style={{ color: "inherit" }} href={contact.url}>
               <span>
                 <span className="fa-lg hide-on-med-only">{contact.logo}</span>{" "}
                 <span className="hide-on-small-only">{contact.name}</span>
@@ -51,4 +56,4 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default Footer;

@@ -7,7 +7,8 @@ class Navbar extends Component {
     this.state = { data: null };
   }
   linkStyle = {
-    margin: "1em 3em"
+    margin: "1em 3em",
+    color: "white"
   };
   render() {
     const gallery = "/gallery";
@@ -15,16 +16,16 @@ class Navbar extends Component {
     return (
       <nav
         className="black"
-        style={{ display: "flex", flexFlow: "row nowrap", justifyContent: "flex-end" }}
+        style={{
+          display: "flex",
+          flexFlow: "row nowrap",
+          justifyContent: "flex-end"
+        }}
       >
-        <NavLink style={this.linkStyle} className="white-text" to={gallery}>
+        <NavLink style={this.linkStyle} to={gallery}>
           Projects
         </NavLink>
-        <NavLink
-          style={this.linkStyle}
-          className="white-text"
-          to={certifications}
-        >
+        <NavLink style={this.linkStyle} to={certifications}>
           Certifications
         </NavLink>
       </nav>
