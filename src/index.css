@@ -21,3 +21,7 @@ a.active {
   animation-name: jello;
   animation-duration: .8s;
 }
+.certifications_fade-appear {
+  animation-name: slideInRight;
+  animation-duration: .3s;
+}
