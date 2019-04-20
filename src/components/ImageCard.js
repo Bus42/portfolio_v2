@@ -73,7 +73,7 @@ class ImageCard extends Component {
         </div>
               <div className='card-action'>
                 <a href={card.url} target={card.title}>
-                  <button className='btn grey darken-1'>View on <span>{card.provider}</span></button>
+                  <button className='btn transparent'>View on <span>{card.provider}</span></button>
                 </a>
               </div>
       </div>
