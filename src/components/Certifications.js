@@ -47,24 +47,23 @@ class Certifications extends Component {
               style={{ width: "350px" }}
             >
               <div className="card-image">
-                <img src={cert.image} alt={cert.title} />
+                <img
+                  onClick={() => {
+                    const active = document.getElementById(`${cert.title}`);
+                    if (document.fullscreenElement) {
+                      document.exitFullscreen();
+                    } else {
+                      active.requestFullscreen();
+                    }
+                  }}
+                  style={{cursor: "pointer"}}
+                  src={cert.image}
+                  alt={cert.title}
+                />
                 <span className="card-title" />
               </div>
-              <div className="card-action black">
+              <div className="card-action black center">
                 <a href={cert.url}>View on {cert.provider}</a>
-                <button className="btn-floating black right">
-                  <i
-                    onClick={() => {
-                      const active = document.getElementById(`${cert.title}`);
-                      if(document.fullscreenElement){
-                       document.exitFullscreen() 
-                      } else {
-                        active.requestFullscreen();
-                      }
-                    }}
-                    className="fas fa-expand"
-                  />
-                </button>
               </div>
             </div>
           );
