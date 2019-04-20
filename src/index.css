@@ -21,7 +21,15 @@ a.active {
   animation-name: jello;
   animation-duration: .8s;
 }
-.certifications_fade-appear {
+.certifications_slide-appear-active {
   animation-name: slideInRight;
+  animation-duration: .3s;
+}
+.gallery_slide-appear-active {
+  animation-name: slideInLeft;
+  animation-duration: .3s;
+}
+.home_slide-appear-active {
+  animation-name: slideInDown;
   animation-duration: .3s;
 }

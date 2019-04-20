@@ -32,14 +32,14 @@ class Certifications extends Component {
     };
   }
   render() {
-    const {appearHome} = this.state;
+    const { appearHome } = this.state;
     return (
-      <CSSTransition 
-      in={appearHome}
-      appear={true}
-      timeout={600}
-      classNames="certifications_fade"
-       >
+      <CSSTransition
+        in={appearHome}
+        appear={true}
+        timeout={600}
+        classNames="certifications_slide"
+      >
         <div
           style={{
             display: "flex",

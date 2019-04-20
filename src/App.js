@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import Certifications from "./components/Certifications";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -27,7 +25,6 @@ class App extends Component {
     const home = this.state.home;
     const gallery = this.state.gallery;
     const certifications = this.state.certifications;
-
     return (
       <div
         id="wrapper"
@@ -64,5 +61,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
