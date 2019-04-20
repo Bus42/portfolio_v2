@@ -15,10 +15,10 @@ class Navbar extends Component {
     return (
       <nav
         className="black"
-        style={{ display: "flex", justifyContent: "flex-end" }}
+        style={{ display: "flex", flexFlow: "row nowrap", justifyContent: "flex-end" }}
       >
         <NavLink style={this.linkStyle} className="white-text" to={gallery}>
-          Project Gallery
+          Projects
         </NavLink>
         <NavLink
           style={this.linkStyle}
