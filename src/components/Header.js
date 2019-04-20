@@ -1,39 +1,28 @@
 import React, { Component } from "react";
-import smoke from "../Assets/smoke.png";
+import { NavLink } from "react-router-dom";
 
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: "Studio42Dev"
-    };
+    this.state = { title: "Studio42" };
   }
   render() {
     return (
-      <div
-        className="card"
-        id="header"
-        style={{
-          height: "120px",
-          backgroundImage: `url(${smoke})`,
-          backgroundPosition: "bottom",
-          backgroundSize: "101% 101%",
-          marginBottom: "2em",
-          border: '0 !important'
-        }}
-      >
-        <div className="card-content">
-          <div className="card-title">
-            <header>
-              <h4 style={{
-                color: "whitesmoke",
-                mixBlendMode: "difference"
-              }} >{this.state.name}</h4>
-              <p />
-            </header>
-          </div>
-        </div>
-      </div>
+      <header className="container white-text" style={{ padding: "10px 2em" }}>
+        <NavLink to="/">
+          <h4 className="white-text">
+            {this.state.title}{" "}
+            <small>
+              <h5 style={{display: "inline"}}>
+                <span className="hide-on-med-and-down">Progressive </span>
+                <span className="hide-on-small-only">Web </span>
+                <span className="hide-on-med-and-down">Application </span>
+                Dev<span className="hide-on-small-only">elopment</span>
+              </h5>
+            </small>
+          </h4>
+        </NavLink>
+      </header>
     );
   }
 }

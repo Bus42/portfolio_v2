@@ -1,20 +1,65 @@
 import React, { Component } from "react";
-import Header from "./components/Header";
-import Intro from "./components/Intro";
-import Gallery from "./components/Gallery";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+
 import Contact from "./components/Contact";
+import Home from "./components/Home";
+import Gallery from "./components/Gallery";
 import Certifications from "./components/Certifications";
+import Header from "./components/Header";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      touchscreen: false,
+      home: "/",
+      gallery: "/gallery",
+      certifications: "/certifications"
+    };
+  }
+  componentDidMount() {
+    if (window.navigator.maxTouchPoints > 0) {
+      this.setState({ touchscreen: true });
+    }
+  }
   render() {
+    const home = this.state.home;
+    const gallery = this.state.gallery;
+    const certifications = this.state.certifications;
+
     return (
-      <div className="container">
-        <Header />
-        <Intro />
-        <Certifications />
-        <Gallery />
-        <Contact />
-      </div>
+      <Router>
+        <div id="wrapper" style={{ minHeight: "100vh" }}>
+          <Header />
+          <nav
+            className="black"
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+          >
+            <Link className="white-text" to={gallery}>
+              Project Gallery
+            </Link>
+            <Link className="white-text" to={certifications}>
+              Certifications
+            </Link>
+          </nav>
+          <div
+            className="container"
+            style={{
+              display: "flex",
+              flexFlow: "column nowrap",
+              justifyContent: "center"
+            }}
+          >
+            <Switch>
+              <Route exact path={home} component={Home} />
+              <Route path={gallery} component={Gallery} />
+              <Route path={certifications} component={Certifications} />
+            </Switch>
+          </div>
+
+          <Contact />
+        </div>
+      </Router>
     );
   }
 }
