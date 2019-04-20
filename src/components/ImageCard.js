@@ -29,7 +29,7 @@ class ImageCard extends Component {
                 className="collapsible-header black"
                 style={{
                   border: "none",
-                  opacity: ".75",
+                  opacity: ".85",
                   width: "100%",
                   display: "flex",
                   justifyContent: "space-between"
@@ -42,7 +42,7 @@ class ImageCard extends Component {
               </div>
               <div
                 className="collapsible-body black"
-                style={{ border: "none", opacity: ".75" }}
+                style={{ border: "none", opacity: ".85" }}
               >
                 <p style={{ color: "white" }}>{card.content}</p>
                 <div className="card-action">

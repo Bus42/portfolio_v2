@@ -29,28 +29,38 @@ class App extends Component {
     const certifications = this.state.certifications;
 
     return (
-      <Router>
-        <div id="wrapper" style={{ minHeight: "100vh" }}>
-          <Header />
-          <Navbar />
-          <div
-            className="container"
-            style={{
-              paddingTop: "5em",
-              display: "flex",
-              flexFlow: "column nowrap",
-              justifyContent: "center"
-            }}
-          >
-            <Switch>
-              <Route exact path={home} component={Home} />
-              <Route path={gallery} component={Gallery} />
-              <Route path={certifications} component={Certifications} />
-            </Switch>
+      <div
+        id="wrapper"
+        style={{
+          display: "flex",
+          flexFlow: "column nowrap",
+          justifyContent: "space-between",
+          minHeight: "100vh"
+        }}
+      >
+        <Router>
+          <div id="wrapper">
+            <Header />
+            <Navbar />
+            <div
+              className="container"
+              style={{
+                paddingTop: "5em",
+                display: "flex",
+                flexFlow: "column nowrap",
+                justifyContent: "center"
+              }}
+            >
+              <Switch>
+                <Route exact path={home} component={Home} />
+                <Route path={gallery} component={Gallery} />
+                <Route path={certifications} component={Certifications} />
+              </Switch>
+            </div>
           </div>
-          <Contact />
-        </div>
-      </Router>
+        </Router>
+        <Contact />
+      </div>
     );
   }
 }
