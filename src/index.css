@@ -22,6 +22,9 @@ code {
 .linkText :hover {
   color: var(--active-color) !important;
 }
+button.btn {
+  font-family: var(--primary-font);
+}
 
 /* Animations */
 a.active {

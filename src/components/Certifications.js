@@ -1,4 +1,9 @@
 import React, { Component } from "react";
+import ImageCard from "./ImageCard";
+import M from "materialize-css";
+const respWebDes = require("../Assets/responsive-web-design.png")
+const jsAlgs = require("../Assets/javascript-algorithms-and-data-structures.png");
+const frontEnd = require("../Assets/front-end-development.png");
 
 class Certifications extends Component {
   constructor(props) {
@@ -7,21 +12,21 @@ class Certifications extends Component {
       certifications: [
         {
           title: "Responsive Web Design",
-          image: require("../Assets/responsive-web-design.png"),
+          image: respWebDes,
           url:
             "https://www.freecodecamp.org/certification/bus42/responsive-web-design",
           provider: "freeCodeCamp"
         },
         {
           title: "Javascript Algorithms and Data Structures",
-          image: require("../Assets/javascript-algorithms-and-data-structures.png"),
+          image: jsAlgs,
           url:
             "https://www.freecodecamp.org/certification/bus42/javascript-algorithms-and-data-structures",
           provider: "freeCodeCamp"
         },
         {
           title: "Front End Development",
-          image: require("../Assets/front-end-development.png"),
+          image: frontEnd,
           url:
             "https://www.freecodecamp.org/certification/bus42/legacy-front-end",
           provider: "freeCodeCamp"
@@ -30,8 +35,32 @@ class Certifications extends Component {
       appearHome: true
     };
   }
+
+  componentDidMount() {
+    M.AutoInit();
+    if (window.navigator.maxTouchPoints > 0) {
+      this.setState({ touchscreen: true });
+    }
+  }
+  componentDidUpdate() {
+    console.log("Certifications component updated");
+    M.AutoInit();
+  }
   render() {
-    return (
+    return this.state.touchscreen ? (
+      <div className="carousel carousel-slider center">
+        {this.state.certifications.map((cert, index)=>{
+          return (
+            <div className="carousel-item black white-text"
+              key={index}
+              style={{display: "flex", justifyContent: "center"}}
+            >
+            <ImageCard card={cert} />
+            </div>
+          )
+        })}
+      </div>
+    ) : (
       <div
         style={{
           display: "flex",
@@ -64,7 +93,7 @@ class Certifications extends Component {
                 <span className="card-title" />
               </div>
               <div className="card-action black center">
-                <a href={cert.url}>View on {cert.provider}</a>
+                <a href={cert.url}><button className="btn transparent" ><span className="linkText">View on {cert.provider}</span></button></a>
               </div>
             </div>
           );
