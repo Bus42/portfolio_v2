@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900|Special+Elite');
+@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900|Special+Elite");
+:root {
+  --primary-font: "Special Elite", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --header-font: "Cinzel Decorative", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
 body {
-  font-family: 'Special Elite', "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: var(--primary-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
@@ -11,11 +15,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.header_navlink_active{
+.header_navlink_active {
   color: red;
-animation-name: shake;
-animation-duration: 3s;
-animation-iteration-count: infinite;
+  animation-name: shake;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes shake {
