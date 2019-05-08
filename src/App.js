@@ -27,7 +27,6 @@ class App extends Component {
     const certifications = this.state.certifications;
     return (
       <div
-        id="wrapper"
         style={{
           display: "flex",
           flexFlow: "column nowrap",
