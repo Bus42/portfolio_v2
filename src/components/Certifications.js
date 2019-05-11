@@ -4,6 +4,7 @@ import M from "materialize-css";
 const respWebDes = require("../Assets/responsive-web-design.png")
 const jsAlgs = require("../Assets/javascript-algorithms-and-data-structures.png");
 const frontEnd = require("../Assets/front-end-development.png");
+const libraries = require("../Assets/front-end-libraries.png")
 
 class Certifications extends Component {
   constructor(props) {
@@ -29,6 +30,13 @@ class Certifications extends Component {
           image: frontEnd,
           url:
             "https://www.freecodecamp.org/certification/bus42/legacy-front-end",
+          provider: "freeCodeCamp"
+        },
+        {
+          title: "Front End Libraries",
+          image: libraries,
+          url:
+            "https://www.freecodecamp.org/certification/bus42/front-end-libraries",
           provider: "freeCodeCamp"
         }
       ],
