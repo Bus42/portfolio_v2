@@ -70,12 +70,12 @@ a.active {
 /* <= 480 */
 
 #app-wrapper {
-  --padding-xs: '0px 12px' !important;
-  --padding-sm: '0px 24px' !important;
-  --padding-md: '0px 48px' !important;
-  --padding-lg: '0px 96px' !important;
-  --padding-xl: '0px 192px' !important;
-  --padding-xx: '0px 384px' !important;
+  --padding-xs: '0px 16px' !important;
+  --padding-sm: '0px 32px' !important;
+  --padding-md: '0px 64px' !important;
+  --padding-lg: '0px 128px' !important;
+  --padding-xl: '0px 256px' !important;
+  --padding-xx: '0px 512px' !important;
 }
 
 @media all and (max-width: 480px) {
