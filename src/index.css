@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900|Special+Elite");
 @import url("./materialize-css/dist/css/materialize.css");
 :root {
-  --primary-font: "Special Elite", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --header-font: "Cinzel Decorative", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --primary-font: "Special Elite", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --header-font: "Cinzel Decorative", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --entrance-timing: 0.3s;
   --active-color: #e81212;
 }
+
 body {
   font-family: var(--primary-font);
   -webkit-font-smoothing: antialiased;
@@ -15,45 +14,112 @@ body {
   background-color: black;
   overflow-x: hidden;
 }
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
 .linkText :hover {
   color: var(--active-color) !important;
 }
+
 button.btn {
   font-family: var(--primary-font);
 }
 
 /* Animations */
+
 a.active {
   color: var(--active-color) !important;
   animation-name: jello;
   animation-duration: 0.8s;
 }
+
 .certifications_slide-appear-active {
   animation-name: slideInRight;
   animation-duration: var(--entrance-timing);
 }
+
 .gallery_slide-appear-active {
   animation-name: slideInLeft;
   animation-duration: var(--entrance-timing);
 }
+
 .home_slide-appear-active {
   animation-name: slideInDown;
   animation-duration: var(--entrance-timing);
 }
+
 .certifications_slide-exit-active {
   animation-name: slideOutRight;
   animation-duration: var(--entrance-timing);
 }
+
 .gallery_slide-exit-active {
   animation-name: slideOutLeft;
   animation-duration: var(--entrance-timing);
 }
+
 .home_slide-exit-active {
   animation-name: slideOutDown;
   animation-duration: var(--entrance-timing);
 }
-/*  */
+
+/* Breakpoints  */
+
+/* <= 480 */
+
+#app-wrapper {
+  --padding-xs: '0px 12px' !important;
+  --padding-sm: '0px 24px' !important;
+  --padding-md: '0px 48px' !important;
+  --padding-lg: '0px 96px' !important;
+  --padding-xl: '0px 192px' !important;
+  --padding-xx: '0px 384px' !important;
+}
+
+@media all and (max-width: 480px) {
+  #app-wrapper {
+    padding: var(--padding-xs);
+  }
+}
+
+/* 480 - 736 */
+
+@media all and (min-width: 481px) and (max-width: 736px) {
+  #app-wrapper {
+    padding: var(--padding-sm);
+  }
+}
+
+/* 737 - 980 */
+
+@media all and (min-width: 737px) and (max-width: 980px) {
+  #app-wrapper {
+    padding: var(--padding-md);
+  }
+}
+
+/* 981 - 1280 */
+
+@media all and (min-width: 981px) and (max-width: 1280px) {
+  #app-wrapper {
+    padding: var(--padding-lg);
+  }
+}
+
+/* 1281 - 1690 */
+
+@media all and (min-width: 1281px) and (max-width: 1690px) {
+  #app-wrapper {
+    padding: var(--padding-xl);
+  }
+}
+
+/* > 1690 */
+
+@media all and (min-width: 1691px) {
+  #app-wrapper {
+    padding: var(--padding-xx);
+  }
+}
