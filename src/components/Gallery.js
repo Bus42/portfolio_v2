@@ -24,8 +24,7 @@ class Gallery extends Component {
           title: "Blogosaurus",
           content:
             "I made this as a way to demonstrate authentication and realtime database integration with Firebase. Sign in (even with a fake email - it's just a demo), view posts by other users, and make new posts",
-          url:
-            "https://https://net-ninja-mario-plan-ad7c1.firebaseapp.com/.studio42dev.com",
+          url: "https://net-ninja-mario-plan-ad7c1.firebaseapp.com/",
           href: "#one!"
         },
         {
