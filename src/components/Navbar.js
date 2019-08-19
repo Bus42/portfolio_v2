@@ -22,10 +22,10 @@ class Navbar extends Component {
           justifyContent: "flex-end"
         }}
       >
-        <NavLink style={this.linkStyle} to={gallery}>
+        <NavLink className="shake-blue" style={this.linkStyle} to={gallery}>
           Projects
         </NavLink>
-        <NavLink style={this.linkStyle} to={certifications}>
+        <NavLink className="shake-blue" style={this.linkStyle} to={certifications}>
           Certifications
         </NavLink>
       </nav>
