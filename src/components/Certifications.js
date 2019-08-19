@@ -101,7 +101,7 @@ class Certifications extends Component {
                 <span className="card-title" />
               </div>
               <div className="card-action black center">
-                <a href={cert.url}><button className="btn transparent" ><span className="linkText">View on {cert.provider}</span></button></a>
+                <a href={cert.url} target={cert.title} className="linkText"><button className="btn transparent shake-blue" ><span>View on {cert.provider}</span></button></a>
               </div>
             </div>
           );
