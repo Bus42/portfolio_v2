@@ -14,7 +14,7 @@ const calculatedStyle = windowWidth > 1400 ? {
     justifyContent: "center"
   };
 
-const Gallery = (props) => {
+const Projects = (props) => {
   return (
     <div
       style={calculatedStyle}
@@ -26,4 +26,4 @@ const Gallery = (props) => {
   );
 }
 
-export default Gallery;
+export default Projects;

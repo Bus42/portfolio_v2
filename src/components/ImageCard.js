@@ -3,7 +3,7 @@ import { toggleFullScreen } from './toggleFullScreen';
 
 const ImageCard = (props) => {
   // props.card = image, title, content, url
-  const imgStyle = { width: '400px', maxWidth: '100%' }
+  const imgStyle = { width: '400px', maxWidth: '100%', borderRadius: '3px' }
   const buttonStyle = { textDecoration: 'none', color: 'inherit' }
   const actionIcon = 'material-icons left';
   const closeIconStyle = {position: 'absolute', bottom: '25px', left: '25px'}

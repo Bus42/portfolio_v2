@@ -78,7 +78,7 @@ a.active {
   animation-duration: var(--entrance-timing);
 }
 
-.gallery_slide-appear-active {
+.Projects_slide-appear-active {
   animation-name: slideInLeft;
   animation-duration: var(--entrance-timing);
 }
@@ -93,7 +93,7 @@ a.active {
   animation-duration: var(--entrance-timing);
 }
 
-.gallery_slide-exit-active {
+.Projects_slide-exit-active {
   animation-name: slideOutLeft;
   animation-duration: var(--entrance-timing);
 }
