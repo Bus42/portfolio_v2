@@ -13,3 +13,4 @@
 
 ### Certifications
 + Add description to cards, include links to project pens created while obtaining certification
++ Fix alignment on desktop display - use 'space-evenly'
