@@ -13,7 +13,7 @@ export const certifications = [
         provider: "freeCodeCamp"
     },
     {
-        title: "Javascript Algorithms and Data Structures",
+        title: "JS Algorithms and Data Structures",
         image: jsAlgs,
         url:
             "https://www.freecodecamp.org/certification/bus42/javascript-algorithms-and-data-structures",
