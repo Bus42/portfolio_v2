@@ -7,8 +7,8 @@ const Certifications = (props) => {
     <div
       style={{
         display: "flex",
-        flexFlow: "row wrap",
-        justifyContent: "space-evenly"
+        flexFlow: "column wrap",
+        justifyContent: "center"
       }}
     >
       {certifications.map((cert, index) => {
