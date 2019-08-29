@@ -13,4 +13,4 @@
 + Convert selected projects to PWAs and include download to phone link visible only to andoroid/ios users
 
 ### Certifications
-+ Add description to cards, include links to project pens created while obtaining certification
++ All current TODOs completed

@@ -10,27 +10,27 @@ export const certifications = [
         image: respWebDes,
         url:
             "https://www.freecodecamp.org/certification/bus42/responsive-web-design",
-        provider: "freeCodeCamp"
+        content: "Developer certification representing approximately 300 hours of coursework"
     },
     {
         title: "JS Algorithms and Data Structures",
         image: jsAlgs,
         url:
             "https://www.freecodecamp.org/certification/bus42/javascript-algorithms-and-data-structures",
-        provider: "freeCodeCamp"
+        content: "freeCodeDeveloper certification representing approximately 300 hours of courseworkCamp"
     },
     {
         title: "Front End Development",
         image: frontEnd,
         url:
             "https://www.freecodecamp.org/certification/bus42/legacy-front-end",
-        provider: "freeCodeCamp"
+        content: "Developer certification representing approximately 400 hours of coursework"
     },
     {
         title: "Front End Libraries",
         image: libraries,
         url:
             "https://www.freecodecamp.org/certification/bus42/front-end-libraries",
-        provider: "freeCodeCamp"
+        content: "Developer certification representing approximately 300 hours of coursework"
     }
 ]
