@@ -1,8 +1,6 @@
 ## Optimization
 + Utilize caching
 + Refactor components to use hooks.
-+ Currently Certifications and Projects components are exactly the same except for the data passed in via module import. Find a way to change this structure to utilize a single component and pass data as props
-+ Export toggleFullScreen function to module
 + Utilize propTypes
 
 ## Styling

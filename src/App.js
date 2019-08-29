@@ -2,10 +2,11 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import Footer from './components/Footer'
 import Home from './components/Home'
-import Projects from './components/Projects'
-import Certifications from './components/Certifications'
+import Gallery from './components/Gallery'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
+import { certifications } from './components/certificationList'
+import { projects } from './components/projectList'
 const App = () => {
   return (
     <div
@@ -32,8 +33,8 @@ const App = () => {
           >
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route path='/projects' component={Projects} />
-              <Route path='/certifications' component={Certifications} />
+              <Route path='/projects' render={(props) => <Gallery list={projects} /> } />
+              <Route path='/certifications' render={(props) => <Gallery list={certifications} /> } />
               <Route render={() => (<Redirect to='/' />)} />
             </Switch>
           </div>

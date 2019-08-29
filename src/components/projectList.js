@@ -9,7 +9,7 @@ const wikiReader = require("../Assets/wikireader.png");
 const jsCalculator = require("../Assets/JS_Calculator.png");
 const ticTacWars = require("../Assets/tictactoe.png");
 
-export const previews = [
+export const projects = [
     {
         image: blogosaurus,
         title: "Blogosaurus",

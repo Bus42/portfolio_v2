@@ -1,6 +1,5 @@
 import React from "react";
 import ImageCard from "./ImageCard";
-import { certifications } from './certificationList';
 
 const windowWidth = window.innerWidth;
 
@@ -14,18 +13,18 @@ const calculatedStyle = windowWidth > 1400 ? {
   justifyContent: "center"
 };
 
-const Certifications = (props) => {
+const Gallery = (props) => {
   return (
     <div
       style={calculatedStyle}
     >
-      {certifications.map((cert, index) => {
+      {props.list.map((entry, index) => {
         return (
-          <ImageCard card={cert} key={index} />
+          <ImageCard card={entry} key={index} />
         );
       })}
     </div>
   );
 }
 
-export default Certifications;
+export default Gallery;
