@@ -45,7 +45,7 @@ export const previews = [
         image: simon,
         title: "Simon (clone)",
         content:
-            "Play the classic Simon game! You can play in strict mode as well, where you lose if you get it wrong once. In regular mode you have three chances to match the pattern each time a button is added to the pattern. Get it right 20 rounds in a row and you win the game.",
+            "Play the classic Simon game in regular or strict mode! Get it right 20 rounds in a row and you win the game.",
         url: "https://bus42.github.io/simonClone/",
         href: "#five!"
     },
@@ -61,7 +61,7 @@ export const previews = [
         image: pomodorClock,
         title: "Pomodoro Clock",
         content:
-            "The Pomodoro Technique uses a timer to break down work into intervals. These intervals are named pomodoros, the plural in English of the Italian word pomodoro (tomato), after the tomato-shaped kitchen timer that Cirillo used as a university student.",
+            "The Pomodoro Technique uses a timer to break down work into intervals separated by breaks of a set duration.",
         url: "https://bus42.github.io/pomodoro/",
         href: "#seven!"
     },
@@ -69,7 +69,7 @@ export const previews = [
         image: wikiReader,
         title: "WikiReader",
         content:
-            "This app has a random page generator which will display a random Wikipedia article in a new window or allow you to enter any search term and show you the top ten rated results with a url that will open in another tab in your browser.",
+            "Search for Wikipedia articles and get the top 10 results or search for a random article.",
         url: "https://bus42.github.io/wiki-reader/",
         href: "#eight!"
     },

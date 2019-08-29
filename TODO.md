@@ -1,6 +1,7 @@
 ## Optimization
 + Utilize caching
 + Refactor components to use hooks. Start with Certifications.js
++ Currently Certifications and Gallery components are exactly the same except for the data passed in via module import. Find a way to change this structure to utilize a single component and pass data as props
 
 ## Styling
 + Change paragraph font to make it more legible.
