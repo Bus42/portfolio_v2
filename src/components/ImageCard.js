@@ -6,14 +6,14 @@ const ImageCard = (props) => {
   const imgStyle = { width: '400px', maxWidth: '100%', borderRadius: '3px' }
   const buttonStyle = { textDecoration: 'none', color: 'inherit' }
   const actionIcon = 'material-icons left';
-  const closeIconStyle = {position: 'absolute', bottom: '25px', left: '25px'}
+  const closeIconStyle = { position: 'absolute', bottom: '25px', left: '25px' }
   return (
     <div id="imageCard" className="card transparent white-text">
       <div className="card-image" style={{ display: 'flex', justifyContent: 'center' }} >
-        <img id={props.card.title} src={props.card.image} alt={`${props.card.title} preview`} style={imgStyle} onClick={(e) => { 
+        <img id={props.card.title} src={props.card.image} alt={`${props.card.title} preview`} style={imgStyle} onClick={(e) => {
           const id = e.target.id;
-          toggleFullScreen(id) 
-          }} />
+          toggleFullScreen(id)
+        }} />
       </div>
       <div className="card-content">
         <span className="card-title activator">{props.card.title}<i className={actionIcon}>expand_more</i></span>
