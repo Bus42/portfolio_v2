@@ -11,8 +11,6 @@ class Navbar extends Component {
     color: "white"
   };
   render() {
-    const gallery = "/gallery";
-    const certifications = "/certifications";
     return (
       <nav
         className="black"
@@ -22,10 +20,10 @@ class Navbar extends Component {
           justifyContent: "flex-end"
         }}
       >
-        <NavLink className="shake-blue" style={this.linkStyle} to={gallery}>
+        <NavLink className="shake-blue" style={this.linkStyle} to='/projects'>
           Projects
         </NavLink>
-        <NavLink className="shake-blue" style={this.linkStyle} to={certifications}>
+        <NavLink className="shake-blue" style={this.linkStyle} to='/certifications'>
           Certifications
         </NavLink>
       </nav>
