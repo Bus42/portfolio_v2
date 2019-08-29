@@ -6,7 +6,8 @@
 ## Styling
 
 ## Components
-### Project Projects
+
+### Projects
 + Convert selected projects to PWAs and include download to phone link visible only to andoroid/ios users
 
 ### Certifications

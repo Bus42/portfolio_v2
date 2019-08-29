@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900|Special+Elite");
+@import url('https://fonts.googleapis.com/css?family=Righteous|Special+Elite&display=swap');
 @import url("./materialize-css/dist/css/materialize.css");
 :root {
   --primary-font: "Special Elite", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --header-font: "Cinzel Decorative", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+  --header-font: "Righteous", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --entrance-timing: 0.3s;
   --active-color: #e81212;
