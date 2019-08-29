@@ -10,4 +10,4 @@
 + Convert selected projects to PWAs and include download to phone link visible only to andoroid/ios users
 
 ### Certifications
-+ All current TODOs completed
++ Completed all current TODOs for Certifications
