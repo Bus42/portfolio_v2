@@ -16,7 +16,7 @@ class Header extends Component {
           <h4 style={{ fontWeight: "bold", color: "white" }}>
             <span className="shake-blue" >Studio</span><span className="shake-red" style={{color: "var(--active-color)"}} >42 </span>
             <small>
-              <h5 style={{ display: "inline" }}>
+              <h5 className="shake-red" style={{ display: "inline", fontFamily: 'var(--primary-font)' }}>
                 <span className="hide-on-med-and-down">Progressive </span>
                 <span className="hide-on-small-only">Web </span>
                 <span className="hide-on-med-and-down">Application </span>
