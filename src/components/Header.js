@@ -14,7 +14,7 @@ class Header extends Component {
       >
         <NavLink to="/">
           <h4 style={{ fontWeight: "bold", color: "white" }}>
-            <span className="shake-blue" >Studio</span><span className="shake-red" style={{color: "var(--active-color)"}} >42 </span>
+            <span>Studio</span><span style={{color: "var(--active-color)"}} >42 </span>
             <small>
               <h5 className="shake-red" style={{ display: "inline", fontFamily: 'var(--primary-font)' }}>
                 <span className="hide-on-med-and-down">Progressive </span>
