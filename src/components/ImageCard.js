@@ -24,16 +24,16 @@ class ImageCard extends Component {
       maxWidth: '100%'
     }
     return (
-      <div id="imageCard" className="card">
+      <div id="imageCard" className="card transparent white-text">
         <div className="card-image" style={{ display: 'flex', justifyContent: 'center' }} >
           <img id={card.title} src={card.image} alt={`${card.title} preview`} style={imageStyle} onClick={(e) => { this.toggleFullScreen(e) }} />
         </div>
         <div className="card-content">
-          <span className="card-title activator grey-text text-darken-4">{card.title}<i className="material-icons right">expand_more</i></span>
+          <span className="card-title activator">{card.title}<i className="material-icons right">expand_more</i></span>
         </div>
-        <div className="card-reveal">
-          <span className="card-title grey-text text-darken-4">{card.title}<i className="material-icons right">close</i></span>
-          <p className="v-align center" >{card.content}</p>
+        <div className="card-reveal grey darken-3">
+          <span className="card-title">{card.title}<i className="material-icons right">close</i></span>
+          <p>{card.content}</p>
           <button className="waves-effect waves-light btn grey darken-2"><a style={{textDecoration: 'none', color: 'inherit'}} href={card.url} target={card.title}><i className="material-icons right">play_arrow</i>Go to {card.title}</a></button>
         </div>
       </div>
