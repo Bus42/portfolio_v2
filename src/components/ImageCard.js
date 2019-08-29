@@ -1,14 +1,5 @@
-import React from 'react'
-
-const toggleFullScreen = (e) => {
-  const id = e.target.id;
-  const active = document.getElementById(id);
-  if (document.fullscreenElement) {
-    document.exitFullscreen();
-  } else {
-    active.requestFullscreen();
-  }
-}
+import React from 'react';
+import { toggleFullScreen } from './toggleFullScreen';
 
 const ImageCard = (props) => {
   // props.card = image, title, content, url
@@ -19,7 +10,10 @@ const ImageCard = (props) => {
   return (
     <div id="imageCard" className="card transparent white-text">
       <div className="card-image" style={{ display: 'flex', justifyContent: 'center' }} >
-        <img id={props.card.title} src={props.card.image} alt={`${props.card.title} preview`} style={imgStyle} onClick={(e) => { toggleFullScreen(e) }} />
+        <img id={props.card.title} src={props.card.image} alt={`${props.card.title} preview`} style={imgStyle} onClick={(e) => { 
+          const id = e.target.id;
+          toggleFullScreen(id) 
+          }} />
       </div>
       <div className="card-content">
         <span className="card-title activator">{props.card.title}<i className={actionIcon}>expand_more</i></span>
