@@ -4,7 +4,6 @@
 + Utilize propTypes
 
 ## Styling
-+ Change paragraph font to make it more legible.
 
 ## Components
 ### Project Projects

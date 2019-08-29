@@ -1,59 +1,34 @@
-import React, { Component } from "react";
+import React from "react";
+import { contacts } from "./contactList";
 
-class Footer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      contacts: [
-        {
-          name: " github",
-          url: "https://github.com/bus42",
-          logo: <i className="fab fa-github" />
-        },
-        {
-          name: " freeCodeCamp",
-          url: "https://www.freecodecamp.org/bus42",
-          logo: <i className="fab fa-free-code-camp" />
-        },
-        {
-          name: " linkedIn",
-          url: "https://www.linkedin.com/in/gregbrewton/",
-          logo: <i className="fab fa-linkedin" />
-        },
-        {
-          name: " CodePen",
-          url: "https://codepen.io/Bus42/",
-          logo: <i className="fab fa-codepen"></i>
-        }
-      ]
-    };
-  }
-  render() {
-
-    return (
-      <div
-        className="white-text"
-        style={{
-          display: "flex",
-          flexFlow: "row wrap",
-          justifyContent: "space-evenly",
-          width: "100%",
-          padding: "1em 0"
-        }}
-      >
-        {this.state.contacts.map((contact, index) => (
-          <span key={index}>
-            <a className="linkText" title={`Image of and link to ${contact.name}`} style={{ color: "inherit" }} href={contact.url} target={contact.name}>
-              <span>
-                <span className="fa-lg hide-on-med-only">{contact.logo}</span>{" "}
-                <span className="hide-on-small-only">{contact.name}</span>
-              </span>
-            </a>
+const Footer = () => (
+  <div
+    className="white-text"
+    style={{
+      display: "flex",
+      flexFlow: "row wrap",
+      justifyContent: "space-evenly",
+      width: "100%",
+      padding: "1em 0"
+    }}
+  >
+    {contacts.map((entry, index) => (
+      <span key={index}>
+        <a
+          className="linkText"
+          title={`Image of and link to ${entry.name}`}
+          style={{ color: "inherit" }}
+          href={entry.url}
+          target={entry.name}
+        >
+          <span>
+            <span className="fa-lg hide-on-med-only">{entry.logo}</span>{" "}
+            <span className="hide-on-small-only">{entry.name}</span>
           </span>
-        ))}
-      </div>
-    );
-  }
-}
+        </a>
+      </span>
+    ))}
+  </div>
+);
 
 export default Footer;
