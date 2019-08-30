@@ -60,19 +60,6 @@ button.btn {
 
 /* Animations */
 
-a.active {
-  color: var(--active-color) !important;
-  position: relative;
-  text-transform: uppercase;
-  text-shadow: 0 0 0.15em red;
-  user-select: none;
-  white-space: nowrap;
-  filter: blur(0.007em);
-  animation: shake 3.5s linear forwards;
-  animation-iteration-count: infinite;
-
-}
-
 .certifications_slide-appear-active {
   animation-name: slideInRight;
   animation-duration: var(--entrance-timing);

@@ -8,11 +8,11 @@ const Header = () => (
   >
     <NavLink to="/">
       <h4 style={{color: "white" }}>
-        <span>Studio</span>
+        <span>STUDIO</span>
         <span style={{ color: "var(--active-color)" }}>42 </span>
         <small style={{fontSize: '.6em'}}>
           <span
-            className="shake-red"
+            className="shake-blue"
             style={{ display: "inline", fontFamily: "var(--primary-font)" }}
           >
             <span className="hide-on-med-and-down">Progressive </span>
