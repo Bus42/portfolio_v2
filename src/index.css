@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900|Special+Elite");
+@import url('https://fonts.googleapis.com/css?family=Righteous|Special+Elite&display=swap');
 @import url("./materialize-css/dist/css/materialize.css");
 :root {
   --primary-font: "Special Elite", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --header-font: "Cinzel Decorative", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+  --header-font: "Righteous", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --entrance-timing: 0.3s;
   --active-color: #e81212;
@@ -59,19 +59,6 @@ button.btn {
 }
 
 /* Animations */
-
-a.active {
-  color: var(--active-color) !important;
-  position: relative;
-  text-transform: uppercase;
-  text-shadow: 0 0 0.15em red;
-  user-select: none;
-  white-space: nowrap;
-  filter: blur(0.007em);
-  animation: shake 3.5s linear forwards;
-  animation-iteration-count: infinite;
-
-}
 
 .certifications_slide-appear-active {
   animation-name: slideInRight;

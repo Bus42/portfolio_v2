@@ -7,19 +7,19 @@ const Header = () => (
     style={{ padding: "10px 2em", fontFamily: "var(--header-font)" }}
   >
     <NavLink to="/">
-      <h4 style={{ fontWeight: "bold", color: "white" }}>
-        <span>Studio</span>
+      <h4 style={{color: "white" }}>
+        <span>STUDIO</span>
         <span style={{ color: "var(--active-color)" }}>42 </span>
-        <small>
-          <h5
-            className="shake-red"
+        <small style={{fontSize: '.6em'}}>
+          <span
+            className="shake-blue"
             style={{ display: "inline", fontFamily: "var(--primary-font)" }}
           >
             <span className="hide-on-med-and-down">Progressive </span>
             <span className="hide-on-small-only">Web </span>
             <span className="hide-on-med-and-down">Application </span>
             Dev<span className="hide-on-small-only">elopment</span>
-          </h5>
+          </span>
         </small>
       </h4>
     </NavLink>
