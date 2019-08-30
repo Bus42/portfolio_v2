@@ -2,13 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const linkStyle = {
-  margin: "1em 3em",
-  color: "white"
+  margin: "1em 3em"
 };
 
 const Navbar = () => (
   <nav
-    className="black"
+    className="black container"
     style={{
       display: "flex",
       flexFlow: "row nowrap",

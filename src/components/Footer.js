@@ -2,8 +2,8 @@ import React from "react";
 import { contacts } from "./contactList";
 
 const Footer = () => (
-  <div
-    className="white-text"
+  <footer
+    className="white-text container"
     style={{
       display: "flex",
       flexFlow: "row wrap",
@@ -28,7 +28,7 @@ const Footer = () => (
         </a>
       </span>
     ))}
-  </div>
+  </footer>
 );
 
 export default Footer;

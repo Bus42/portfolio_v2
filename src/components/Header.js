@@ -7,10 +7,10 @@ const Header = () => (
     style={{ padding: "10px 2em", fontFamily: "var(--header-font)" }}
   >
     <NavLink to="/">
-      <h4 style={{color: "white" }}>
+      <h4 style={{ color: "white" }}>
         <span>STUDIO</span>
         <span style={{ color: "var(--active-color)" }}>42 </span>
-        <small style={{fontSize: '.6em'}}>
+        <small style={{ fontSize: ".6em" }}>
           <span
             className="shake-blue"
             style={{ display: "inline", fontFamily: "var(--primary-font)" }}
