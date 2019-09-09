@@ -16,14 +16,6 @@ export const certifications = [
         <ul className="collection">
           <li className="collection-item grey lighten-2">
             <a
-              href="https://s.codepen.io/Bus42/debug/dXmXpO/xnkabZbydoOM"
-              target="new"
-            >
-              Tribute Page
-            </a>
-          </li>
-          <li className="collection-item grey lighten-2">
-            <a
               href="https://s.codepen.io/Bus42/debug/GYPeYg/vPAKKeKvVVJA"
               target="new"
             >
@@ -97,14 +89,6 @@ export const certifications = [
               target="new"
             >
               Drum Machine
-            </a>
-          </li>
-          <li className="collection-item grey lighten-2">
-            <a
-              href="https://s.codepen.io/Bus42/debug/bgdzop/xJAjOnOLnzxk"
-              target="new"
-            >
-              JavaScript Calculator
             </a>
           </li>
           <li className="collection-item grey lighten-2">

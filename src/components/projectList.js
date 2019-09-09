@@ -28,14 +28,14 @@ export const projects = [
         image: magicCounter,
         title: "Magic Counter",
         content:
-            <p>Counter42 uses Firebase for authentication and realtime database. Change your name and background, select additional damage types, and create an account to keep track of wins and losses. It can also be downloaded and run as a native app.</p>,
+            <p>Set name and background, additional damage types, and create an account to keep track of wins and losses. Downloadable on Android devices and iPhones.</p>,
         url: "https://counter42.studio42dev.com/",
     },
     {
         image: twitcher,
         title: "Twitcher",
         content:
-            <p>Built as part of the FreeCodeCamp curriculum, this app displays a list of frequent Twitch.tv users, shows number of views and followers for each, if they are currently streaming, and their avatars using the Twitch.tv API. The app also has a feature which lets you search for other Twitch.tv users. This app uses jQuery and Bootstrap and is hosted with Firebase.</p>,
+            <p>This app displays a list of frequent Twitch.tv users with views and followers for each, shows if they are currently streaming and includes a user search.</p>,
         url: "https://twitcher-c1978.firebaseapp.com/",
     },
     {
@@ -49,7 +49,7 @@ export const projects = [
         image: rickAndMorty,
         title: "Rick and Morty Soundboard",
         content:
-            <p>As part of freeCodeCamp's curriculum, I created a soundboard that can be controlled by mouse, keyboard, or touch. I wanted a 'cartoony' feel, so I went with Rick and Morty. It can also be downloaded and run as a native app on most phones.</p>,
+            <p>This soundboard that can be controlled by mouse, keyboard, or touch. I wanted a 'cartoony' feel, so I went with Rick and Morty(PG-13 Language). It can also be downloaded and run as a native app on iPhone and Android devices.</p>,
         url: "https://soundboard-420247.firebaseapp.com/",
     },
     {
